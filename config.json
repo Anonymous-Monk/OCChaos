@@ -1,0 +1,25 @@
+{
+  "pre_str":"ZTY",
+  "pre_to_str":"TY",
+  "suf_set" :[".h", ".m", ".xib", ".storyboard", ".mm"],
+  "project_path" : "/Volumes/Files/Document/LionMobi/TestIpa/TestIpa",
+  "pbxpro_path": "/Volumes/Files/Document/LionMobi/TestIpa/TestIpa.xcodeproj/project.pbxproj",
+  "img_suf_set":[".png", ".jpg"],
+  "file_floadPath":"/Volumes/Files/Document/LionMobi/TestIpa/TestIpa",
+  "classArray":["NSString", "UILabel", "NSDictionary", "NSData", "UIScrollView", "UIView", "UITextView", "UITableView",
+              "UIImageView"],
+  "h_file_mark_arr":["l;", "m;", "n;", "q;", "y;"],
+  "m_file_mark_arr":["n];", "w];", "m];", "c];", "p];", "q];", "l];"],
+  "关于参数的说明（该字段不做修改，其余字段按需修改）":{
+    "pre_str":"需要修改的类名前缀 （需替换）",
+    "pre_to_str":"新的类名前缀 （需替换）",
+    "suf_set" :"需要搜寻以下文件类型 （根据自己需求替换）如 '.h', '.m', '.xib', '.storyboard', '.mm'",
+    "project_path" : "项目路径   （找到自己的项目路径）",
+    "pbxpro_path": "项目project.pbxproj文件路径 需要更新配置文件中的类名 （找到自己的项目project.pbxproj路径）",
+    "img_suf_set":"图片的结尾后缀 数组",
+    "file_floadPath":"在目标.h  .m 文件所在的路径",
+    "classArray":".h文件里属性的类型从这个数组里随机选(按需修改)",
+    "h_file_mark_arr":".h   .m  文件中 需要在哪种标识后面添加废弃代码(按需修改)",
+    "m_file_mark_arr":".h   .m  文件中 需要在哪种标识后面添加废弃代码(按需修改)"
+  }
+}
