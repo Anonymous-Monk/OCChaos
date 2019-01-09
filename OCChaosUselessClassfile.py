@@ -4,6 +4,7 @@
 import random
 import os, sys
 import string
+from OCChaosConfig import OCChaosConfig
 
 
 class OCChaosUselessClassfile(object):
@@ -14,6 +15,7 @@ class OCChaosUselessClassfile(object):
     array = []
 
     def __init__(self):
+        self.out_put_path = ""
         pass
 
     # 第一步:首先生成一个500位的数组 驼峰类型的元素 用作文件名 eg:AsdfdfGsd
@@ -35,10 +37,10 @@ class OCChaosUselessClassfile(object):
     # 创建.h文件
     def text_createH(self, fileName, msg, msg1, propertyNumber, methodArray, msg3):
 
-        if not os.path.exists(sys.path[0] + '/OCFiles/'):
-            os.mkdir(sys.path[0] + '/OCFiles/')
+        if not os.path.exists(self.out_put_path + '/'):
+            os.mkdir(self.out_put_path + '/')
 
-        full_path = sys.path[0] + '/OCFiles/' + fileName + '.h'
+        full_path = self.out_put_path + '/' + fileName + '.h'
         file = open(full_path, 'w')
         file.write(
             '//\n//  ' + fileName + '.h\n//  Tywin\n\n//  Created by Tywin on 2019.\n//  Copyright ©  2019年 Tywin. All rights reserved.\n//\n\n')
@@ -49,17 +51,17 @@ class OCChaosUselessClassfile(object):
             propryNameArray.append(random.choice(self.array))
         propryNameArray = list(set(propryNameArray))
         for propertyName in propryNameArray:
-            file.write('@property(nonatomic,strong)' + random.choice(self.classArray) + ' * ' + propertyName + ';\n')
+            file.write('@property(nonatomic,strong)' + random.choice(OCChaosConfig().getClassArray()) + ' * ' + propertyName + ';\n')
         file.write('\n\n')
         for methodName in methodArray:
             file.write('- (void)pushTo' + methodName + 'VC:(NSDictionary *)info;\n')
         file.write(msg3)
         file.close()
-        print('Done')
+        print(fileName+'.h Done')
 
     # 创建.m文件
     def text_createM(self, fileNmae, msg, msg1, methodArray, msg3):
-        full_path = sys.path[0] + '/OCFiles/' + fileNmae + '.m'
+        full_path = self.out_put_path + '/' + fileNmae + '.m'
         file = open(full_path, 'w')
         file.write(
             '//\n//  ' + fileNmae + '.m\n//   Tywin\n\n//  Created by Tywin on 2019.\n//  Copyright ©  2019年 Tywin. All rights reserved.\n//\n\n')
@@ -74,7 +76,7 @@ class OCChaosUselessClassfile(object):
             file.write('\n}\n\n')
         file.write(msg3)
         file.close()
-        print('Done')
+        print(fileNmae+'.m Done')
 
     # array = ['HwxrFvrj', 'QnzduQbtdd', 'PvcrwLtqhf', 'UvdhDbjn', 'SuntmyTxvyzg', 'CvlxwBipbp', 'GzrdyzIbimvz', 'CqsjqMmgsp', 'OxaaeuWjhasc', 'NjiardRvwgbi', 'NcculmLtpljq', 'ApoqQrll', 'GkgokDyvjb', 'EblldkVouplj', 'KfdrFvnw', 'SfhyhObftc', 'SmruByoc', 'YzcccvXmpmit', 'OmqvaHpxat', 'XzytsUyvyd', 'MjforNnnyi', 'ZvjhuIdogs', 'BzfrxzSeahxc', 'PycycwFjtpny', 'XvngtoSedljr', 'DktiaCbucd', 'AqbplNuodc', 'MzkvgZuala', 'KdwzIoej', 'AaynatUpqcfd', 'IyvwhZvtjc', 'UmijGmsy', 'AoayndXxghym']
     # array = list(set(array))
@@ -82,7 +84,8 @@ class OCChaosUselessClassfile(object):
 
 
 
-    def start_create_files(self, fileCount=20):
+    def start_create_files(self,output_path, fileCount=20):
+        self.out_put_path = output_path
         self.create_fileName(nameCount=fileCount)  # 随机生成文件名称,数量由外部控制
         for name in self.array:
             number = random.randint(3, 10)

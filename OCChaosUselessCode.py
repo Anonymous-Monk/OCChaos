@@ -141,10 +141,10 @@ class OCChaosUselessCode(object):
                 if '.m' in file:
                     self.MFileAddMj(file_dir + '/' + file, self.config.getM_file_mark_arr())
 
-    def start_create_useless_code(self):
+    def start_create_useless_code(self,file_load_path):
         self.getNameArray()
         # 要修改的文件所在的文件夹路径
-        self.file_name(self.config.getFile_floadPath())
+        self.file_name(file_load_path)
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 {
-  "pre_str":"ZTY",
-  "pre_to_str":"TY",
+  "pre_str":"TY",
+  "pre_to_str":"TYZ",
   "suf_set" :[".h", ".m", ".xib", ".storyboard", ".mm"],
   "project_path" : "/Volumes/Files/Document/LionMobi/TestIpa/TestIpa",
   "pbxpro_path": "/Volumes/Files/Document/LionMobi/TestIpa/TestIpa.xcodeproj/project.pbxproj",

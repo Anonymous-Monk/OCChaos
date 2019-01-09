@@ -38,15 +38,15 @@ class OCChaosConfig(object):
         return self.jsonData['m_file_mark_arr']
 
     def get_json_data(self):
-        with open("config.json", 'r') as f:
+        with open("/Volumes/Files/WorkFile/组件及个人仓库/OCChaos/config.json", 'r') as f:
             temp = json.loads(f.read())
             return temp
 
 
-if __name__ == "__main__":
-
-    config = OCChaos_Config()
-    print(config.getImg_suf_set())
+# if __name__ == "__main__":
+#
+#     config = OCChaos_Config()
+#     print(config.getImg_suf_set())
 
 '''
 一些参数的说明
