@@ -38,6 +38,9 @@ class OCChaosConfig(object):
     def getM_file_mark_arr(self):
         return self.jsonData['m_file_mark_arr']
 
+    def getOutput_path(self):
+        return self.jsonData['output_path']
+
     def get_json_data(self,path=sys.path[0]+"/config.json"):
         with open(path, 'r') as f:
             temp = json.loads(f.read())

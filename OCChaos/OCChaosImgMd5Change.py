@@ -3,12 +3,12 @@
 import hashlib
 import os
 
-from Class.OCChaosConfig import OCChaosConfig
+from OCChaos.OCChaosConfig import OCChaosConfig
 
 
 class OCChaosImgMd5Change(object):
-    def __init__(self):
-        self.config = OCChaosConfig()
+    def __init__(self,config):
+        self.config = config
 
     # 获取MD5
     def GetFileMd5(self, filename):

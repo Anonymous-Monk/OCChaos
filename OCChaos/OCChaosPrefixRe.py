@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 import os
-from Class.OCChaosConfig import OCChaosConfig
+from OCChaos.OCChaosConfig import OCChaosConfig
 
 
 class OCChaosPrefixRe(object):
-    def __init__(self):
-        self.config = OCChaosConfig()
+    def __init__(self,config):
+        self.config = config
 
     # 文件重命名函数，返回新的文件名
     def file_rename(self, file_path):

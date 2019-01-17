@@ -4,7 +4,7 @@
 import random
 import os, sys
 import string
-from Class.OCChaosConfig import OCChaosConfig
+from OCChaos.OCChaosConfig import OCChaosConfig
 
 
 class OCChaosUselessClassfile(object):
@@ -14,8 +14,9 @@ class OCChaosUselessClassfile(object):
     index = 0
     array = []
 
-    def __init__(self):
-        self.out_put_path = ""
+    def __init__(self,config):
+        self.config = config
+        self.out_put_path = config.getOutput_path()
         pass
 
     # 第一步:首先生成一个500位的数组 驼峰类型的元素 用作文件名 eg:AsdfdfGsd
@@ -51,7 +52,7 @@ class OCChaosUselessClassfile(object):
             propryNameArray.append(random.choice(self.array))
         propryNameArray = list(set(propryNameArray))
         for propertyName in propryNameArray:
-            file.write('@property(nonatomic,strong)' + random.choice(OCChaosConfig().getClassArray()) + ' * ' + propertyName + ';\n')
+            file.write('@property(nonatomic,strong)' + random.choice(self.config.getClassArray()) + ' * ' + propertyName + ';\n')
         file.write('\n\n')
         for methodName in methodArray:
             file.write('- (void)pushTo' + methodName + 'VC:(NSDictionary *)info;\n')

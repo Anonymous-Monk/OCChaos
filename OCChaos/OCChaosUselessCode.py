@@ -4,7 +4,7 @@ import random
 
 import os
 
-from Class.OCChaosConfig import OCChaosConfig
+from OCChaos.OCChaosConfig import OCChaosConfig
 
 
 class OCChaosUselessCode(object):
@@ -22,8 +22,8 @@ class OCChaosUselessCode(object):
                  'UIImageView']  # .m文件里创建的元素的类型从这个数组里随机选
     name_array = []
 
-    def __init__(self):
-        self.config = OCChaosConfig()
+    def __init__(self,config):
+        self.config = config
 
     def getNameArray(self):
         for i in range(500):

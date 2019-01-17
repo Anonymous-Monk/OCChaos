@@ -10,6 +10,7 @@
               "UIImageView"],
   "h_file_mark_arr":["l;", "m;", "n;", "q;", "y;"],
   "m_file_mark_arr":["n];", "w];", "m];", "c];", "p];", "q];", "l];"],
+  "output_path":"/Volumes/Files/Document/LionMobi/TestIpa/out_put",
   "关于参数的说明（该字段不做修改，其余字段按需修改）":{
     "pre_str":"需要修改的类名前缀 （需替换）",
     "pre_to_str":"新的类名前缀 （需替换）",
@@ -20,6 +21,7 @@
     "file_floadPath":"在目标.h  .m 文件所在的路径",
     "classArray":".h文件里属性的类型从这个数组里随机选(按需修改)",
     "h_file_mark_arr":".h   .m  文件中 需要在哪种标识后面添加废弃代码(按需修改)",
-    "m_file_mark_arr":".h   .m  文件中 需要在哪种标识后面添加废弃代码(按需修改)"
+    "m_file_mark_arr":".h   .m  文件中 需要在哪种标识后面添加废弃代码(按需修改)",
+    "output_path":"垃圾OC类文件输出目录"
   }
 }
